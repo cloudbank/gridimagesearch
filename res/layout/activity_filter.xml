@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FilterActivity" >
+
+    <Spinner
+        android:id="@+id/sizeSpin"
+         android:entries="@array/sizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sizeLabel"
+        android:layout_alignLeft="@+id/colorSpin"
+        android:layout_below="@+id/searchLabel"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/colorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sizeLabel"
+        android:layout_below="@+id/sizeLabel"
+        android:layout_marginTop="30dp"
+        android:text="@string/color_filter" />
+
+     <Spinner
+         android:id="@+id/colorSpin"
+           android:entries="@array/colors"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/colorLabel"
+         android:layout_alignLeft="@+id/typeSpin"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/sizeSpin"
+         android:layout_marginTop="14dp" />
+     
+      <Spinner
+          android:id="@+id/typeSpin"
+          android:entries="@array/types"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/typeLabel"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/colorSpin"
+          android:layout_marginTop="14dp"
+          android:layout_toRightOf="@+id/typeLabel" />
+
+      <TextView
+          android:id="@+id/sizeLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/searchLabel"
+          android:layout_marginLeft="20dp"
+          android:layout_marginTop="30dp"
+          android:text="@string/image_size" />
+
+      <TextView
+          android:id="@+id/siteLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/typeLabel"
+          android:layout_below="@+id/typeLabel"
+          android:layout_marginTop="34dp"
+          android:text="@string/site_filter" />
+
+      <TextView
+          android:id="@+id/typeLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/colorLabel"
+          android:layout_below="@+id/colorLabel"
+          android:layout_marginTop="30dp"
+          android:text="@string/image_type" />
+
+      <EditText
+          android:id="@+id/etSite"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/siteLabel"
+          android:layout_toRightOf="@+id/colorLabel"
+          android:ems="10"
+          android:hint="enter site url" />
+
+      <Button
+          android:id="@+id/saveBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/etSite"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="20dp"
+          android:text="@string/save"
+          android:onClick="saveFilter"  />
+
+      <TextView
+          android:id="@+id/searchLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/sizeLabel"
+          android:text="@string/search_options"
+          android:textStyle="bold" />
+
+</RelativeLayout>

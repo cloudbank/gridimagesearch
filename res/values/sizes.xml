@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string-array name="sizes">
+        <item>none</item>
+        <item>icon</item>
+        <item>medium</item>
+        <item>xxLarge</item>
+        <item>huge</item>
+    </string-array>
+</resources>
